@@ -1,0 +1,25 @@
+DDD with Steve Morris
+The closer our business logic models the real world, the greater the chance we have of getting it right
+
+What problems does it solve:
+- complexity
+- centralised, unified models
+- low cohesion, high coupling
+
+Entities - has identity and is long-lived - "model intent"
+  - A method on an entity should:
+    - Assert invariants
+    - Act
+    - Announce change
+Domain events - statement of something that happened (statement of fact)
+Aggregate root - entry point
+Aggregates - Context that you perform actions within
+Services - no state; no identity; manipulate aggregates
+Repositories - strictly shouldn't save; use unit of work for saving
+  - Avoid generic things; it's a rider/fundraisingRepository etc. not an entityRepository
+
+Commands and Queries are simple DTOs (no behaviour)
+Handlers (CommandHandlers and QueryHandlers provide the behaviour for Commands and Queries)
+
+Ubiquitous language - its all about the names
+Bounded context - its all about the scope

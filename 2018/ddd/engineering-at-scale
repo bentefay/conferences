@@ -1,0 +1,13 @@
+nginx (n - gin - x)
+docker compose build section
+
+react -> cloudflare -> nginx -> react
+                    -> asp.net core -> azure
+
+Control the client if possible - this lets you control things like throttling
+Use math / encryption to easily distinguish valid and malicious traffic
+Move processing to client (avoid server-side rendering unless its worth the cost)
+Defer as much work as possible (such as aggregation or asynchronous checking of validity) - the most important thing is to persist the future work to do
+  - Compare the tradeoffs of persisting even invalid data vs potentially slower validation of the data
+Don't handle retrying unless you have to (retrying requires storing state) - defer to the client if you can
+Sharding is useful but expensive

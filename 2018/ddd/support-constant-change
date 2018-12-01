@@ -1,0 +1,63 @@
+author of building evolutionary architecture
+change : business change and technical change
+ - business drive change (domain change, business priorities change, ...)
+ - technology driven change
+   - how is long term planning possible when things constantly change in unexpected ways?
+   - maybe long term planning is not possible
+   - maybe the system should be built for change
+
+everything in architecture is a tradeoff
+reusable code: code use, reuse and abuse
+
+""software reuse is more like an organ transplant than snapping together Lego blocks""
+
+Identifying commonality like a "customer service" and factoring it out is a **tradeoff**:
+  - The more reusable something is, the less USABLE it is
+  - A thing that is reused is difficult to change, and difficult to make specific to a bounded context
+  - The idea of bounded contexts is super useful in this context
+
+Some things are a natural fit for reuse: *Infrastructure services*
+ - Authentication and authentication
+ - Logging
+ - Metrics
+ - Service discovery
+ - Secrets
+
+These services can be shared as sidecars or service meshes
+
+Domain services are not as suitable for reuse
+Duplication and coupling are both annoying
+ - coupling makes incremental change difficult
+ - duplication lets things diverge and is double work
+
+Often duplication is better than coupling
+
+Last 10% trap
+A project can be incredibly successful for the first 90% and then the last 10% is impossible
+what the user wants (80% is super-easy, 10% is difficult, 10% is impossible)
+
+current 10% trap
+serverless?
+"low code" environments
+
+everything in architecture is a tradeoff
+nothing is BINARY - everything exists along a spectrum
+businesses sometimes standardise on a tech stack that has to meet all teams' requirements meaning it is overengineered for most uses
+often business consider software to be overhead rather than strategic (core to the business)
+This is not a great mindset - software can almost always be strategic (if you're not seeing it that way, someone else will)
+
+Provide a set of curated technology stacks that support a range of requirements, then let teams choose
+
+Modular monolith (well-factored monolith) (domain partitioning) 
+
+vs
+
+Layered architecture (technical partitioning) (presentation -> business rules -> persistence)
+
+How often do you change persistence, vs a specific bounded-context?
+
+microservices:
+- small quantums of deployable functionality
+- low coupling
+
+If you need to improve performance and are worried about regressions, run both, compare their results, store analytics and then return the old result until you are confident the new algorithm is correct.
