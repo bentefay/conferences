@@ -1,0 +1,89 @@
+How to avoid the top ten software security flaws - Gary McGraw
+
+Design flaws not bugs
+A flaw is not a bug
+
+What is a flaw
+
+Bugs:
+buffer overflow
+race conditions
+unsafe environment variables
+unsafe system class
+untrusted input problems
+
+Can use static analysic tools to analyse compiled code
+
+Flaws:
+Misuses of cryptography
+Compartmentalization problems in design
+Privileged block protection failure
+Catastrophic security failure
+Type safety confusion error
+Insecure auditing
+Broken or illogical access control
+Method over-riding problems
+Signing too much code
+** Forgot to authenticate user
+
+50% of security defects are bugs, and 50% are flaws (though this is a bit of a false dicotomy)
+
+A study of developer security practices: BSIMM9
+
+"Architecture Analysis" or "Threat Analysis"
+
+Earn or give, but never assume, trust
+- Make sure all data from an untrusted client are validated
+- Assume data are compromised
+- Avoid authorization, access control, policy enforcement, and use of sensitive data in client code
+
+Use an authentication mechanism that cannot be bypassed or tampered with
+- Prevent the user from changing identity without re-authentication, once authenticated
+- Consider the strength of the authentication a user has provided before taking action
+
+Authorize after you authenticate
+- There are 3 main ways to authenticate: Something that you are, something that you know, ...
+- Perform authorization as an explicit check
+- Re-use common infrastructure for conducting authorization checks
+
+Strictly separate data and control instructions, and never process control instructions received from untrusted sources
+- Expose methods or endpoints that consume structured types
+- Beware of injection-prone APIs (XSS, SQL injection, shell injection)
+
+Define an approach that ensure that all data are explicitly validated
+- Ensure that comprehsnive data validation actually takes place
+- Make security review of the validation scheme possible
+- Use a centralized validtion mechanism and canonical data forms (avoid strings)
+- Use a white-list, not a black-list. There are more bad inputs than good inputs.
+
+Use cryptography correctly
+- Use standard algorithms and libraries
+- Centralize and re-use
+- Design for crypto agility
+- Get help from real experts
+- Watch out for keh management issues
+- Be careful about randomness
+
+Identify sensitive data and how they should be handled
+- Know where your sensitive data are
+- Classify your data into categories
+- Consider data controls
+- Plan for change over time
+
+Always consider the users
+- Make things secure by default
+- How willing is your user base to log in repeatedly? Some may only want to have to log in once. Others see this as a vulnerability.
+
+Understand how integrating external components changes you attack surface
+- Many eyeballs does not make code secure. 
+
+Be flexible when considering future changes to objects and actors
+- Design for change
+- Have a plan for "secret compromise" recovery
+- Crypto flaws
+- Keeping secrets is hard
+
+PODCAST:
+The silver bullet security podcast with Gary McGraw
+
+A key improvement in software would be an inventory of all dependencies - something like what Nix provides

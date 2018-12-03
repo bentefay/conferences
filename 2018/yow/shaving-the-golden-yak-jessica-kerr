@@ -1,0 +1,70 @@
+Shaving the Golden Yak
+Jessica Kerr
+
+Attack yak - You have to deal with it - merges, linters, tests, code review, build failure, testing setup, what does this code even do?, what is this feature?
+ - Code review
+   - Positives: feedback, consistency and information sharing
+   - Negatives: slows you down
+  Just pair instead
+
+Summon with care - don't lay these traps for each other
+Track the attacks - track how much time is being wasted
+Coordinate your defense - note the problems in retrospective and do work to automate them / fix them / remove them
+Error messages => Call them "help and guidance errors"
+
+Pairing is great for having one person steeped in the code, and another focussed on the purpose of what we're doing
+
+When shaving a stack of yaks:
+Prioritize
+- Urgent task? Go around!
+- Important yak? Re-focus on solving the yak
+Track the stack
+Clear the path
+
+Aim for smooth, not fast when solving yaks. Care about the future.
+Generativity : the difference in your team's work with you... vs without you.
+How much did my team do?
+
+Trim yaks
+Hackhacking yak
+Things you do for yourself
+- IDE setup, learn a tool, personal automation, read, learn the system, refactoring, aliases, bash scripts / powershell, reading code
+- Refactoring is a great way to improve your mental model of a system (and invalidate everyone elses model of a system)
+
+Automation is necessarily about saving time. It's about saving attention. About smoothing. So you can focus on delivering value.
+
+Make sure you really want to push to master: define NOREALLY
+If you define a macro, it provides a hook into your work process to which you can add other things
+Timebox your yak shaving
+
+Proven usefulness => timebox
+If it's a learning yak, give it more time:
+- Tech
+- System (more important)
+- Business (most important)
+
+Spread the benefits - share the knowledge with others (pairing, blog posts, ...)
+
+If your business is successful, it will become complex, which will make it more successful...
+That should be BUSINESS COMPLEXITY, NOT TECHNICAL COMPLEXITY
+
+Yak racing - when you are hiding your yaks and your learning, you aren't benefiting from the network effect
+
+Royal yaks (yakkity yaks)
+Talk to people
+Software system	structure will match the organisation's ***COMMUNICATION*** structure 
+
+1. Who knows about what?
+   - Asking people for help makes them like you
+2. What do we each need to know?
+   - An important part of being in a network is that you need to keep track of who's mental model you will be modifying by making a change?
+3. "Yes, I want to know" 
+
+Developers at google. Studied. Found that productivity was corrolated with psychological safety. Mutual learning is critical.
+	
+Golden yak
+Yaks that lead to a virtuous cycle of improvements
+Fast access to log -> easier to save work -> more useful log messages -> I use the log more
+Continuous deployment -> faster, smaller, more frequent
+We shape our tools, and then our tools shape us. The more people know it, the more useful it is.
+Make things easy that you want to happen

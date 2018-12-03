@@ -1,0 +1,70 @@
+No code - Avdi Grimm
+
+Why do we write code 
+To solve problems? Sort of.
+More like: to effect change in the world
+Code is a high leverage tool (like a fence driver), but it can have diminishing returns
+
+Code is overkill
+
+Code can be waste (is it even released? if it's released, does it do what people want? does it provide value?)
+Code can be a distraction from what we want to achieve
+Code can be a liability - every line of code you write is a commitment to:
+ - maintain it
+ - explain it
+ - to a solution to a problem; adding code to that direction will always be easier than changing direction
+Ignore your pojects, and they'll go away
+
+Writing code is not really the job of a software developer
+
+---
+What we really do: building systems of work
+Finding, discovering, creating workflows
+---
+
+Spreadsheets and text documents are an amazing prototyping tool
+Don't EVER start with writing code
+Being able to draw on something printed (Annotation) is amazing for customer feedback
+Commodity tools can be very helpful here
+
+Before you code: 
+mockups and prototypes are a high level of effort for an artifact that isn't malleable
+spreadsheets, documents, paper: not just accessible but writeable by almost anyone
+
+---
+What we really do: building systems of work
+Finding, discovering, creating workflows
+---
+
+**Understand the system by doing the work manually**
+- opportunity to discover shortcuts before making a psychological commitment
+- task may turn out not to be worth automating
+- chance to discover which cases are common and which are rare
+- discovery is easier when done separately from automation
+- manual experiences makes automation go more smoothly
+
+***********	
+As developers, we are really good at optimizing for local maxima
+***********
+
+Remain focussed on your goal:
+>> I will not write a single line of code to sell or deliver my goal
+
+Side note: technology bias is always a bad idea. If a lot of people are using Wordpress + PHP, get over yourself.
+Don't be precious
+
+You time, skill and understanding of a domain (system of work) is the critical thing
+It's easy to spread yourself or a team too thin - focus on the value
+
+Your code has leverage from precision
+Using other people's code has leverage from ecosystem
+Align the system: using your code as glue
+Treat your code as a collaborator in your system - it can be a collaborator with humans - via tickets, emails, slack, prompt, ...
+
+As a junior programmer, coding is a superpower
+As an experienced programmer, the ability to refrain from coding is a superpower
+
+Be aware of tools that exist (and are constantly being produced).
+Case studies exist to justify using commodity tools
+
+When choosing a commodity tool: choose the one that everyone else is using

@@ -1,0 +1,70 @@
+Keynote - Jessica Kerr
+The origins of opera and the future of programming
+
+An invisible college (camerata) - is the key to creativity in science
+=> group of people with common purpose; work separately and together
+=> must share a commonality of process
+=> must share a common language
+=> coping with a common puzzle which they separately solve together
+=> a diverse group of people
+
+Great teams make great people (not the other way around)
+Systems thinking - the strong forces are in the interrelationships between entities not the individual entities
+Symmathesy - A living system, with living parts, based on mutual learning (a self-adaptive learning system)
+
+A system is not the sum of its parts (additive)
+It is a product of their interactions (multiplicative)
+The parts are a product of their past interactions (exponetial)
+
+I'm learning from my systems and tools and they are learning from me (by me changing them)
+As a software developer, as we get better, we zoom out, our scope widens from just code, to code and database, to choices about which language and which database, ... and so on
+
+A senior developer must have both the technology knowledge, but also know a system and have the influence to change the organisation
+- i.e. you can't hire them, but you can hire someone that likes to ask questions
+
+The line of representation - the interface (UI or command-line tool) that bridges the human relationships and the software system relationships - very important - connects the whole living system
+Mental models are how people make decisions (understand and makes changes). We all have different mental models, and they're all out of date.
+
+Downhill invention
+Uphill analysis
+
+Not invented here syndrome: 
+- It is easy to incrementally build up a system, and at the same time, incrementally build up your understanding of that system. Eventually it becomes complex, but you've bootstrapped yourself up the complexity curve.
+- It is much harder to understand an already built complex system.
+
+If someone already understands a system, they can change the system faster than anyone else can understand it.
+
+individual vs gropu interested - "The race to be first has to be reconciled in science with the need and the norm of sharing."
+
+Ideas are not conserved like energy. As they are shared, they grow. 
+
+In economics, we study the flow of money (how many times did it move)
+In ecology, we study the flow of material (atoms / nutrients). A growing system => more flow / more connections
+
+Symmathesy - Learning parts, learning from each other
+Mob programming is good for this. All the knowledge of yuor team, directed to one problem.
+
+** We need to maximize mutual learning
+Detect and reward mutual learning
+- Where did you learn that?
+
+******
+Obliquity - to become great, put the team first
+******
+
+Great developers are not born or trained. Great developers are symmathesised.
+
+"There was a sense of innovation in the air"
+The idea of systematic testing and measurement (the scientific method)
+Empiricism (learn about the world through our sense and then use reason / rationale thought to test)
+Innovation and disruption used to have negative connotations - changing the system was bad
+Multi-disciplinary groups were a new thing
+The renaissance was a period of decompartmentalization - a period which broke down the barriers that had kept things in order - but also apart
+- it's the same with testers vs developers vs product managers vs ...
+
+Software is not a craft
+Coding is a skill
+The point of software dev is having an impact on the world
+Software is not architecture or writing or art... it's a new thing
+Software is the next thing after art - the ongoing building of and participating in a symmathesy
+Software developers are symmathecists in the medium of software

@@ -1,0 +1,54 @@
+Transforming programming
+Dave Thomas
+
+Design is what lets us change code - well designed code is easier to change than poorly designed code
+
+------
+When faced with a coding decision, choose the path that makes future change easier
+------
+
+Most *design principles* are about making change easier
+Decoupling is about allowing code to change
+Single responsibility - 1 to 1 correspondence between a feature and a class
+Dependency inversion - always have depedencies going up the abstraction tree, not down
+
+*Design patterns* are a response to a set of circumstances - they are context specific. Argues that GoF is a set of problems specific to C++.
+
+Patterns and principles are a way of describing *what* you have done, not for solving problems
+
+How can we remember to design? 
+Use your intuition
+Build habit
+For example, before coding something (anything): 
+- write a single sentence at the same level of abstraction
+- look for clauses (commas, and, then, ..,)
+- recursively split and repeat
+- work out what the state is for each thing 
+
+Object Oriented Programming - work is done by independent, opaque, processing units that communicate by passing messages to each other
+
+Immutability - values never change (or new definiton: changed values are never shared)
+First class functions 
+
+Functional programming - immutable data transformed by pure functions often in the presence of an ADT (algebraic data types) and laziness
+
+Processes are a unifying principle in OO and FP: objects are processes in OO (they have the non-shared state) and functions are executed inside a process in FP
+
+As an example of applying his habit:
+
+Web app waits for two players to join, then mediates a game between them
+
+Split up sentences:
+- Web app waits for two players to join
+  - When a player arrives make them wait until the next player arrives, then pass the two to the game
+    - let player join
+    - waiting room (only this step has state - pending player)
+    - pass to game
+- Mediates a game between them
+
+Thinking about design comes from intuition
+Intuition is built by habit
+Maximize cohesion and minimize coupling
+Make it easy to change
+
+Developers: Lazy and arrogant. Can't be bothered to investigate prior art.
