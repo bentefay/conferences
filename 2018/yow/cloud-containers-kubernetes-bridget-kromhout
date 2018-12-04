@@ -1,0 +1,26 @@
+Cloud containers kubernetes - Bridget Kromhout
+
+CAP - consistency or availability (partitions are guaranteed)
+
+A container is just process isolation: namespaces (what a process can see) + cgroups (what a process can do)
+
+
+Docker swarm, Hashicorp Nomad, Kubernetes
+Look at your specific problems before choosing a tool
+
+Terraform & hosted k8s
+Helm & apps with draft
+Event-driven scripting with brigade and kashti
+
+HELM: the package manager for kubernetes: Helm is the best way to find, share, and use software built for Kubernetes (using HELM charts)
+A package manager that installs things on kubernetes
+
+DRAFT: Simple app development and deploument - into any Kubernetes cluster
+
+BRIGADE: Run scriptable, automated tasks in the cloud - as part of your Kubernetes cluster
+
+KASHTI: A simple UI to display build results and logs
+
+container.training (do-it-yourself kubernetes tutorials)
+
+Virtual kubelet (lets you pretend anything is a kubelet)

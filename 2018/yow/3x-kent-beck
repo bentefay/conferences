@@ -1,0 +1,86 @@
+3x - Explore Expand Explore - Kent Beck
+
+Facebook - Development culture: chaotic, random... but it was working. The site stayed up.
+When he saw the culture: his instinct was to preserve, enhance, explain
+Each team worked very differently. It was organised chaos. There was a pattern.
+
+It's important to know what world you live in:
+convex - lots of small experiments that have a very low chance of a big payoff
+concave - big investment that has a small payoff, but low chance of failure. In this case you want to reduce the risk of failure and slightly increase the payoff.
+
+Convex
+|         |
+|         |
+|         |
+|- - - - -/  cost
+|________/
+|__________> probability of success
+
+Concave
+|    _______
+| - / - - -  cost
+|  /
+| / 
+|/
+|___________> probability of success
+
+
+Waterfall:
+|            |
+| - - - - - -|
+|            |
+|            |
+|           /
+|__________/
+|_____________
+
+The big question: What do you have to lose?
+
+Exploration -> finding growth loops - the more you grow, the more you can grow (decreasing marginal cost)
+
+You have to try a lot of bad ideas before you find a growth loop. Exploration.
+What do you have to lose? Make sure you're in a convex world.
+
+The opposition to exploration is indifference - no one cares about your idea
+       
+                         ract
+                   xt
+                e
+              d 
+            n
+          a
+         p
+        x
+       e
+     re
+explo
+
+There are (at least) 3 very different periods in the life of a business / project:
+Explore - How little work can I do to validate an idea (binary - you either win or lose). 
+  Small chance of large payoff. 
+  (Convex). 
+  Focus on lots of experimenting. 
+  Only write tests that help you experiment quicker. 
+  Estimate is just guess. Don't do it.
+Expand - Economies of risk. 
+  * One thing you do will get WAY more traction than anything else.
+  It's very obvious when you transition from explore into expand.
+  Lots of money. Need to reduce risk. Find the next thing that is going to kill you. 
+  ***Large chance of large payoff.*** Small period of time.
+Extract - This is where KPIs, testing, ... make more sense. 
+  Large chance of small payoff. 
+  (Concave) 
+  Focus on making little improvements.
+
+You can do extract, expand and explore at the same time, but they need different skillsets, different measurements, ...
+At Facebook, projects at different stages were treated differently. (And this went well)
+
+However, at Facebook, performance review is metrics driven ("impact"). You must meet the metric-based goal that you set. This doesn't work great when you're in extract.
+At this point, everyone is competing to get in their features to improve their "impact" to keep their job. But all these features are interacting is incredibly complex ways - and this
+is leading to terrible problems. They now need to be evaluating quality of decision making, not quality of impact.
+
+Kent Beck uses twitter to explore ideas.
+One in 20 of his ideas really trigger a response, even though he has no idea which idea it will be.
+He also tests his music in this way on Soundcloud.
+The key is to cheaply and quickly experiment with ideas.
+

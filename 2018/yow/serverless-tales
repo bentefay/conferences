@@ -1,0 +1,71 @@
+Serverless tales - Peter Sbarski, PhD
+A cloud guru
+
+Choose the right tool for the job
+
+IaaS -> PaaS -> Serverless
+VM -> Application -> Function
+
+Serverless pushes you into event-driven programming
+
+A collection of lambda functions make up a "micro-service"
+
+700k users + 3TB of data => $10,000 bill
+
+Firebase = a streaming database
+
+Dynamo -> Firebase mantains aggregate -> User
+
+How did it used to run:
+
+| Your code
+| Lambda runtime (node.js, python, c#, ...)              |
+| Sandbox (Linux)                                        | one function 
+|------- cgroups, namespaces, seccomp, iptables, chroot -|
+Guest OS (Amazon Linux) - used to just be an EC2 VM (one per account)
+Hypervisor
+Host OS (Amazon Linux)
+
+Now: it runs on bare EC2 VM instance with firecracker maintaining isolation
+
+AWS re:invent talk - modern application design
+
+Cloudfront - CDN?
+Route 53 - Can load balance or fail over at DNS level
+
+AWS cloud map
+Endpoints are dynamically located
+
+Dynamo DB
+
+Investigate: AWS Cloud Map, Dynamo DB, Cloudfront, Route 53, Kinesis, S3 (buckets), Cloudwatch, VPCs
+
+1 function = 1 task
+No state
+Design for failure
+Set function concurrency to 0 as kill switch
+Beware of serverless cancer (try to avoid recursion)
+Serveless monliths can be OK initially
+Incremental architecture is not ditry
+Use step functions or durable functions for workflows
+Use distribute tracing - tool called x-ray
+
+Each function should have its own locked-down specific IAM role
+
+By not backing change easily reversible, Blackbaud Engineering System is deferring some significant pain (can't delete, can't rename, ...)
+
+Measure your latency - P50, P90, P99 (percentiles)
+Avoid using languages with long cold-starts (like Go)
+Consider how you hydrate/load data in function
+
+4 metrics per function: measure latency, failure rates, ...
+
+Can use functions to do map reduce
+
+Cost savings can be an order of magnitude higher and significantly faster
+
+youtube.com?v=lleCVR2Mupw
+youtube.com?v=POvrK3S3gQ
+
+A Cloud Guru: acloud.guru/serverless
+book.acloud.guru

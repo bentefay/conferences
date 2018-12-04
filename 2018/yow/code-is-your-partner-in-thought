@@ -1,0 +1,73 @@
+Code is your partner in thought (George Fairbanks)
+
+Does your code get worse over time?
+Specifically, does complexity build up over time?
+Do you have analysis docs (that describe your design)?
+Does your code express your analysis directly?
+
+Why does complexity build up?
+How can software become better over time, now worse?
+How can coding be joyful?
+
+Traffic light example
+One street twice as busy as the other
+Why is one double the other?
+Why 30 and 15, not 40 and 20?
+
+Rocket engine example
+Why the spiral?
+Liquid oxygen can be used to cool the exhaust bell and converted into a gas to be burned
+But you have to fully understand and analyse the system to understand the spiral
+
+Peter Naur - Programming properly should be regarded as an activity by which the programmers form or achieve a certain kind of insight, a theory, of the matters at hand
+
+while (true) {
+  observe world;
+  if (surpise) refactor theory so it isn't surprising;
+}
+
+How well I understand ~= How well my theory matches future observables
+
+while (true) {
+  pick up new requirement;
+  if (surprise) refactor program;
+}
+
+Over time, tune pgoram to staisfy requirements
+Goal: avoid "DEAD ENDS" so program can always be adapted 
+Kent Beck - "Make the change simple, then make the simple change"
+
+There are two ways of constructing a software design: One way is to make is so simple that there are obviously deficiences, and the other way is to make it so complicated that there are no obvious deficiencies.
+
+Even if you losts everything. The most important thing is the theory in the team's head:
+- the model
+- the design / technology
+**** - an argument about why this design does the right thing ... a reason for why things are the way they are (the underlying reason for a design)
+
+To design continuously, our code must express our theories
+The only alternative is building a rube goldberg machine that has a heap of tests and it just gets more and more complex and indiscernable
+
+Distributed cognition - store your cognition physically
+We think about cognition as something purely mental
+But the reality is that we have to invent an external representation of the mental thing to help us 
+
+Abstract data types (interfaces for useful data structures) vs Algebraic data types
+
+Supervenience - There is emergent behaviour at each layer of abstraction that is difficult to infer from first principles of the layer below (atoms vs biology vs sociology)
+
+Very important that everyone has good theories / models of the system internally
+Must also have to have good external representations
+
+Each refinement of code and model gives developers a clearer view. Consider the heliocentric vs earthcentric model of planetary movement
+
+Push a snowball along the ground, and to move forward, you accumulate more and more snow. It gets larger and larger.
+
+Code reviews a great opportunity to get theories out of heads.
+Expose and fix misunderstandings across the team.
+Train team to express what's in their head, as code or comments
+
+Use standup meetings to cmmunicate changes to theory. 
+*** Rotate who leads the standup.
+
+Code is by definition instructions for a machine
+But it must also bootstrap our cognition 

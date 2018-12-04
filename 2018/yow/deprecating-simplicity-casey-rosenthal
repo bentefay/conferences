@@ -1,0 +1,67 @@
+Deprecating simplicity (Casey Rosenthal)
+
+Dimensions you can improve:
+- Performance
+- Availability (MMORPG)
+- Fault tolerance (Bank)
+- + Feature velocity
+
+Make deployment easier. Give teams freedom.
+
+Example:
+P - personalization service
+Q - coordinations storage
+
+P -> Q -> cassandra (column store)
+       -> redis
+
+Q looks at cache (redis) then db (relatinoship) then default response
+
+If redis fails, then cassandra gets overload and fails, Q returns 404, then P crashes because it requires Q
+
+SIMPLICITY is key. 
+Types of complexity:
+Accidental complexity - there is no way to prevent it from growing, at least at some small rate
+Essential complexity - domain or non-functional requirements
+
+Redundancy
+- Functionality has redunancy - redundancy can cause us to push past safety limits because we falsely believe the redundancy will protect us
+- Deviation is within experience base
+- Issue is self-limiting
+
+Taking risks can be a good technique for learning how to deal with risky situations
+Being "careful" to avoid risk leaves you vulnerable to when situations occur
+
+Ecnomic pillars of complexity
+States (can minimize the number of possible states - but businesses are always, by necessity, increasing states (adding functionality))
+Relationships (can minimize the number of communication channels - but communication has a bunch of other benefits)
+Environment (can't do anything about this)
+Reversibility (this is one thing we can make an impact on) (CI/CD, containers, blue/green, canaries, feature flags)
+
+Netflix have a culture where there is no CTO or architect to force teams to follow specific best practice - instead force engineers through chaos engineering to create reliable systems by creating real, immediate, clear, well-defined problem.
+
+A software engineer implicity operates in the following boundaries:
+- economic
+- workload
+- safety 
+
+The facilitation of experiments to uncover systemic weakness
+Engineer often prioritise ecomic and workload boundaries over safety boundaries (because it is difficult to know whether you are close to this boundary).
+Chaos engineering helps engineers maintain awareness of the safety boundary
+
+There is no right way to write software - the relative importance of states, availbility, relatinoships, performance, fault tolerance, economics, reversibility, environment, ... are always changing
+
+Communication is key: everyone must have a model of what everyone else is doing so they can self-organise
+
+Embrace complexity and navigate it (don't try to avoid it)
+Provide opportunities for teams to practice working together
+Tolerate inefficiency (efficiency is brittle; you should be able to tolerate them)
+Optimize reversibility
+Communicate the safety margin (using something like chaos engineering)
+
+To introduce chaos engineering:
+Start with the riskiest service in a system
+Build a hypothesis about how reliable a system is
+If there is a risky system, don't just poke it till it breaks. Fix the problems. Then test your hypothesis.
+If you have a complex system, chaos engineering is the only known way to gain insights into the resilience of the system
+

@@ -1,0 +1,63 @@
+Cloud performance root cause analysis at netflix - Brendan Gregg
+
+Cloud monitoring tool of performance (1 minute averages of metrics): Atlas tool
+Vector tool: 1 second averages
+
+How would you see a performance graph for sub-1 second?
+CPU subs-second - offset heat map
+Painted from top to bottom, left to right. Color depth indicates number of active cpus. Allows you to detect patterns.
+
+Single-CPU runs Flame Graph
+
+Flamescope lets use use sub-1 second performance graphs and then choose a time-range to look at a flame-graph
+
+ROot cause analysis:
+Observability - stack traces, dumps, etc.
+Methodology - What do you do with all this data?
+Velocity - Empowering developers. Getting out of their way. How can I do things like give them a GUI for debugging.
+
+If load increases -> auto scaling groups
+  - Scaling policy based on things like load avg, latency, ...
+
+Bad push -> ASG cluster rollback (fast rollback for issues, traffic managed by ELastic Load Balancers, Automated Canary Analysis creates a single instance and checks its performance)
+
+Instance failure -> Hystrix for timeouts
+
+Region failure -> Zuul 2 reroute traffic
+
+Overlooked issue -> chaos engineering
+ - termination
+ - kill availability zones
+ - latency (artifical delay)
+ - conformity: kills non-best-practices instances
+ - doctor: health checks
+ - janitor: kills unused instances
+ - security: kills non-compliant services
+
+What triggers root cause perf analysis? High latency (often can't scale out of this, have to address underlying issue), growth (reducing cost), upgrades (having to upgrade software, which often introduces regressions)
+
+*******
+RED method : request rate, errors, duration
+
+USE method : draw a functional diagram of all components in the system (CPU, memory, disk, disk, net) (utilization, saturation and errors)
+
+If you have an instance with high-latency, don't just restart. Can be an early indication of a problem. Better to root cause.
+
+When building a dashboard: always consider the order of the visualizations
+
+Be mindful that profiling tools on linux in containers will not always be csoped to just the container
+
+Flamegraphs are awesome (flamegraph = x axis is alphabet; flamechart = x axis is time)
+X axis is alphabet (NOT TIME) - if time, difficult to merge stack frames; except if single threaded
+Y axis is stack depth
+
+CPU profiling solves most performance problem at Netflix
+
+Tracing
+eBPF (extended Berkeley packet filter) - VM technology for running programs in kernal space in a VM
+Instructions per cycle (instructions executed per cycle of the CPU)
+Modern processors have so many cores and hyperthreads that they can be just stalled on main memory
+
+Get push button CPU flame graphs kernel & user
+Check out eBPF perf tools: bcc, bpftrace
+Measure IPC as well as CPU utilization

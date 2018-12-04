@@ -1,0 +1,7 @@
+You can build microservices around nouns or verbs
+If nouns, all your data about an entity is centralized, but features often span many entities, so an entity service going down affects many features
+With microservices baesd on verbs, features are decoupled. They pass entities between them. Each has the view they need of the entity.
+
+NEVER name things are entities.
+
+Name them after business processes.
